@@ -26,8 +26,6 @@ import lombok.experimental.SuperBuilder;
 @NoArgsConstructor @Getter @Setter @SuperBuilder @AllArgsConstructor
 public class Stock extends BaseEntity{
 	
-	//@ManyToOne(cascade = {CascadeType.ALL})
-	
 	@OneToOne(fetch = FetchType.LAZY)
 	@MapsId
 	@JoinColumn(name = "item_id")
